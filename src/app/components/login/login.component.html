@@ -1,0 +1,51 @@
+<div class="login h-100 w-100 mt-5">
+  <div class="col-md-3 col-sm-12">
+    <div class="login-form">
+      <form class="w-100 d-flex flex-column align-items-center">
+        <h4 class="text-primary">Login to your account</h4>
+
+        <div class="form-group w-100">
+          <input
+            type="text"
+            class="form-control mb-2 text-primary bg-secondary"
+            placeholder="Email or phone or username"
+          />
+        </div>
+
+        <div class="form-group w-100">
+          <input
+            type="password"
+            class="w-100 form-control mb-2 text-primary bg-secondary"
+            placeholder="Password"
+          />
+        </div>
+
+        <div class="w-100 d-flex justify-content-between">
+          <div>
+            <label for="rememberEmail" class="mr-5">Remember me</label>
+            <input
+              type="checkbox"
+              name="rememberEmail"
+              id="remember-email"
+            />
+          </div>
+          <a href="#">Forgot Password</a>
+        </div>
+        
+        <button
+          type="submit"
+          class="w-100 btn btn-primary mt-3"
+          id="login-button"
+          (click)="onSubmit()"
+        >
+          Log in
+        </button>
+
+        <p class="">
+          Need an account? <a href="#">Sign up</a>
+        </p>
+        
+      </form>
+    </div>
+  </div>
+</div>

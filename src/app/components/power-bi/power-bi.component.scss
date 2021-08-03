@@ -1,0 +1,57 @@
+#innerLabelBox {
+    background-color: blue;
+    text-align: center;
+    color: white;
+}
+
+#outerLabelBox {
+    height:  471.25px;
+    background-color: blue;
+    text-align: center;
+    
+}
+html,body
+{
+  margin:0px;
+  padding:0px;
+  border:0px;
+}
+
+iframe
+{
+    margin:0px;
+    padding:0px;
+    border:none;
+    overflow:hidden;
+}
+#visualTitle {
+    color: grey;
+    background-color: white;
+    text-align: start;
+}
+#Grow {
+
+    background-color: lightblue;
+    
+}
+.Y-Axis {
+    justify-content: center;
+    text-align: center;
+    transform: rotate(-90deg);
+}
+#DG {
+    
+    background-color: lightgrey;
+}
+#Profit {
+    text-align: center;
+    background-color: lightblue;
+}
+#Loss {
+    text-align: center;
+    background-color: lightgrey;
+}
+
+.reversed {
+    transform: rotate(180deg);
+}

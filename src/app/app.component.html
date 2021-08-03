@@ -1,4 +1,12 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div class="main h-100">
+  <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
+  <div *ngIf="loggedIn" class="dashboard h-100">
+    <div class="left-panel">
+      <router-outlet name="leftPanel"></router-outlet>
+    </div>
+    <div class="main-panel">
+      <router-outlet class="" name="mainPanel"></router-outlet>
+    </div>
+  </div>
+</div>

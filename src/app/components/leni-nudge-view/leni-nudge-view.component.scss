@@ -1,0 +1,21 @@
+.leni-nudge {
+    display: flex;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: auto;
+    align-items: center;
+}
+
+.nudge-text {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-self: flex-start;
+}
+
+.leni-image {
+    max-height: 65%;
+    max-width: 98%;
+}

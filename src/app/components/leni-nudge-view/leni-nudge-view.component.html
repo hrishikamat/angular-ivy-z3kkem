@@ -1,0 +1,18 @@
+ <div class="leni-nudge w-100 h-100">
+    <div class="nudge-text text-primary">
+        <h4>Nudge View</h4>
+        <p>{{ nudge.whatNLG || "Leni Nudge Text" }}</p>
+        <p *ngIf="nudge.whereNLG">{{ nudge.whereNLG }}</p>
+        <p *ngIf="nudge.whyNLG">{{ nudge.whyNLG }}</p>
+    </div>
+
+    <img 
+    *ngIf="nudge && nudge.chart_image; else noImage"
+    [src]="'data:image/png;base64,' + nudge.chart_image"
+    alt="Leni Nudge Image"
+    class="leni-image"/>
+
+    <ng-template #noImage>
+        <h5 class="text-primary leni-image">No Image to display</h5>
+    </ng-template>
+</div>

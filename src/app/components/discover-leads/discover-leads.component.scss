@@ -1,0 +1,24 @@
+.reversed {
+    transform: rotate(180deg);
+}
+
+.arrow {
+    max-height: 37px;
+}
+
+.ag-row-hover {
+    /* putting in !important so it overrides the theme's styling as it hovers the row also */
+    background-color: #dfdfff !important;
+  }
+  
+.ag-column-hover {
+    background-color: #dfffdf;
+  }
+
+  .ag-header-cell {
+    background-color: #0d6efd !important;
+  }
+ 
+  
+
+ 

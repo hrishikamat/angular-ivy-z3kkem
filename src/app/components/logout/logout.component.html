@@ -1,0 +1,52 @@
+<button
+  class="btn btn-primary align mr-2"
+  id="signout-button"
+  type="button"
+  data-bs-toggle="offcanvas"
+  data-bs-target="#offcanvas2Example"
+  aria-controls="offcanvas2Example"
+  (ngSubmit)="onSubmit()"
+>
+  Sign out
+</button><!--  -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvas2Example"
+  aria-labelledby="offcanvas2ExampleLabel"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvas2ExampleLabel">Logout</h5>
+    <button
+      type="button"
+      class="btn-close text-reset"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <div class="logout-main-text">
+        <h3>Underwriting Workbench &trade;</h3>
+        <p>Are you sure you want to log out?</p>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="col-md-6 col-sm-12">
+        <div class="logout-form">
+          <form>
+            <button
+              type="submit"
+              class="btn btn-primary mt-3 mr-4"
+              id="logout-button"
+            >
+              Logout
+            </button>
+            <button type="submit" class="btn btn-secondary mt-3">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

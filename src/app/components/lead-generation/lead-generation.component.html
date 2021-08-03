@@ -1,0 +1,118 @@
+<div class="d-flex flex-row container mt-4 w-100 mx-3 justify-content-evenly">
+   
+  <div class="card mb-3 col-6 mx-2 flex-fill flex-grow-1 w-100">
+    <h1 class="card-header bg-primary text-white" style="font-size: 24px;">Industry Dimensions</h1>
+    <div class="card-body w-100">
+        <div class="container">
+      <form>
+        <div class="form-group">
+            <label for="sector" class="text-secondary fs-4 mb-1">Sector</label>
+            <select class="form-select w-100" name="sector">
+
+              <option selected>Sector....</option>
+              <optgroup label="sector">
+                <!--<option *ngFor="let sector of sectors" value={sector.value}>One</option>-->
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </optgroup>
+            </select>
+            
+          </div>
+
+        <div class="form-group">
+            <label for="subsector" class="text-secondary fs-4 mb-1">Sub-Sector</label>
+            <select class="form-select w-100" name="subsector">
+              <option selected>Sub-Sector....</option>
+              <optgroup label="subsector">
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </optgroup>
+            </select>
+           
+          </div>
+        <div class="form-group">
+            <label for="industryGrp" class="text-secondary fs-4 mb-1">Industry Group</label>
+            <select class="form-select w-100" name="industryGrp">
+              <option selected>Industry Group....</option>
+              <optgroup label="industryGrp">
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </optgroup>
+            </select>
+            
+          </div>
+      </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3 col-6  mx-2 flex-fill flex-grow-1 w-100">
+    <h1 class="card-header bg-primary text-white" style="font-size: 24px;">Geography Dimensions</h1>
+    <div class="card-body w-100">
+      <div class="container">
+        <form class="d-flex flex-column">
+          <div class="form-group flex-grow-1 d-flex flex-column">
+            <label for="country" class="text-secondary fs-4 mb-1">Country</label>
+            <select class="form-select w-100 flex-grow-1 " name="country">
+              <option selected>Country....</option>
+              <optgroup label="country">
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </optgroup>
+            </select>
+           
+          </div>
+          <div class="form-group flex-grow-1">
+            <label for="region" class="text-secondary fs-4 mb-1">Region</label>
+            <select class="form-select" name="region">
+              <option selected>Region....</option>
+              <optgroup label="region">
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </optgroup>
+            </select>
+           
+          </div>
+          <div class="form-group flex-grow-1">
+            <label for="state" class="text-secondary fs-4 mb-1">State</label>
+            <select class="form-select" name="state">
+              <option selected>State....</option>
+              <optgroup label="state">
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </optgroup>
+            </select>
+           
+          </div>
+          <div class="form-group flex-grow-1">
+            <label for="city" class="text-secondary fs-4 mb-1">City</label>
+            <select class="form-select" name="city">
+              <option selected>City....</option>
+              <optgroup label="city">
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </optgroup>
+            </select>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="d-flex  justify-content-evenly w-100 flex-grow-1  my-2 go-submit">
+    <button class="btn btn-primary go-submit" (click)= "leadgeneration()">
+      <span ><i class="bi bi-search"></i>
+</span>
+      Let's Discover Leads
+    </button>
+  </div>

@@ -1,0 +1,102 @@
+<div class="navbar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary" id="navigation">
+    <div class="container-fluid d-flex d-flex-row-start justify-content-start">
+
+      <!-- Hamburger Menu -->
+      <form class="form-inline my-2 my-lg-0" *ngIf="loggedIn">
+        <div id="nav-search d-flex d-flex-row">
+          <app-hamburger-menu></app-hamburger-menu>
+        </div>
+      </form>
+
+      <!-- Brand logo/home link -->
+      <div class="navbar-logo">
+        <!--<img
+          src="https://www.lntinfotech.com/wp-content/uploads/2017/05/LTI-Lets-grp_lockup_th-3.jpg"
+          alt="LTI"
+          height="50px"
+        />-->
+        <a class="navbar-brand text-white" href="#">RISKInsight</a>
+      </div>
+    </div>
+
+    <!-- Leni Search -->
+   <div *ngIf="loggedIn" class="">
+     <app-leni-search></app-leni-search>
+   </div>
+
+   <!-- Nav Bar buttons -->
+    <div
+      class="container-fluid d-flex d-flex-row justify-content-end align-items-center"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav mr-auto" *ngIf="loggedIn" [ngClass]="{'linkDisable':!linksEnabled}">
+        <li class="nav-item active">
+          <a class="nav-link text-white navbar-link" href="#">
+            <object type="image/svg+xml" data="../../../assets/Bell.svg" class="navbar-icons">Notifications</object>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white navbar-link" href="#">
+            <object type="image/svg+xml" data="../../../assets/Gear.svg" class="navbar-icons">Settings</object>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white navbar-link" href="#">
+            <object type="image/svg+xml" data="../../../assets/question-in-ball.svg" class="navbar-icons">Help</object>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white navbar-link" href="#">
+            <object type="image/svg+xml" data="../../../assets/smile.svg" class="navbar-icons">Feedback</object>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Preferences
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li> -->
+      </ul>
+
+      <!-- User actions -->
+      <div class="nav-user-actions d-flex d-flex-row align-items-center" *ngIf="loggedIn">
+        <object type="image/svg+xml" data="../../../assets/user-icon.svg" class="navbar-icons">Profile</object>
+        <p class="nav-user-text text-white" >{{ userName || 'User name'}}</p>
+      </div>
+      <!-- log in/out should be in the user icon
+      <form class="form-inline my-2 my-lg-0">
+        <div id="nav-search d-flex d-flex-row">
+          <span *ngIf="!loggedIn">
+            <app-login></app-login>
+          </span>
+          <span *ngIf="loggedIn">
+            <app-logout> </app-logout>
+          </span>
+        </div>
+      </form>
+    -->
+      <div *ngIf="!loggedIn" class="lti-logo">
+        <img 
+          src="https://www.lntinfotech.com/wp-content/uploads/2017/05/LTI-Lets-grp_lockup_th-3.jpg"
+          alt="LTI"
+          height="50px"/>
+          <!-- Should be SVG when Given -->
+      </div>
+    </div>
+  </nav>
+</div>

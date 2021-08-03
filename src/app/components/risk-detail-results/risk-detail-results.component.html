@@ -1,0 +1,121 @@
+<ul class="nav nav-pills nav-fill mt-3" id="RiskDetailTab" role="tablist">
+  <li class="nav-item border-primary" role="presentation">
+    <button
+      class="nav-link active border-primary"
+      id="business-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#business"
+      type="button"
+      role="tab"
+      aria-controls="business"
+      aria-selected="true"
+    >
+      Business
+    </button>
+  </li>
+  <li class="nav-item border-primary" role="presentation">
+    <button
+      class="nav-link rounded"
+      id="property-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#property"
+      type="button"
+      role="tab"
+      aria-controls="property"
+      aria-selected="false"
+    >
+      Property
+    </button>
+  </li>
+
+  <li class="nav-item border-primary" role="presentation">
+    <button
+      class="nav-link rounded"
+      id="location-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#location"
+      type="button"
+      role="tab"
+      aria-controls="location"
+      aria-selected="false"
+    >
+      Location
+    </button>
+  </li>
+  
+  <li class="nav-item border-primary" role="presentation">
+    <button
+      class="nav-link rounded"
+      id="weather-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#weather"
+      type="button"
+      role="tab"
+      aria-controls="weather"
+      aria-selected="false"
+    >
+      Weather
+    </button>
+  </li>
+  <li class="nav-item border-primary" role="presentation">
+    <button
+      class="nav-link rounded"
+      id="social-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#social"
+      type="button"
+      role="tab"
+      aria-controls="social"
+      aria-selected="false"
+    >
+      Social
+    </button>
+  </li>
+</ul>
+
+<div class="tab-content mt-5" id="RiskDetailTabContent">
+  <div
+    class="tab-pane fade show active"
+    id="business"
+    role="tabpanel"
+    aria-labelledby="business-tab"
+  >
+    <app-risk-detail-business></app-risk-detail-business>
+  </div>
+
+  <div
+    class="tab-pane fade"
+    id="property"
+    role="tabpanel"
+    aria-labelledby="property-tab"
+  >
+    <app-risk-detail-property></app-risk-detail-property>
+  </div>
+
+  <div
+    class="tab-pane fade"
+    id="location"
+    role="tabpanel"
+    aria-labelledby="location-tab"
+  >
+    <app-risk-detail-location></app-risk-detail-location>
+  </div>
+
+  <div
+    class="tab-pane fade"
+    id="weather"
+    role="tabpanel"
+    aria-labelledby="weather-tab"
+  >
+    <app-risk-detail-weather></app-risk-detail-weather>
+  </div>
+
+  <div
+    class="tab-pane fade"
+    id="social"
+    role="tabpanel"
+    aria-labelledby="social-tab"
+  >
+    <app-risk-detail-social></app-risk-detail-social>
+  </div>
+</div>

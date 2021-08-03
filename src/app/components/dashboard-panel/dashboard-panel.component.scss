@@ -1,0 +1,59 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 31% 3.5% 31% 3.5% 31%;
+}
+
+.top {
+    grid-column: 1;
+    grid-row: 1/2;
+}
+
+.middle {
+    grid-column: 1;
+    grid-row: 3/4;
+}
+
+.bottom {
+    grid-column: 1;
+    grid-row: 5/6;
+}
+
+.panel-menu {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.panel-item {
+    display: flex;
+    margin: 5px 10px;
+}
+
+.panel-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    align-content: center;
+    margin: 10px;
+}
+
+.panel-icons {
+    width: 4em;
+    height: 4em;
+    display: inline;
+    margin: 0px 2px;
+    pointer-events: none;
+}
+
+.panel-route {
+    background-color: inherit;
+}
+
+.panel-route:hover {
+    background-color: #CEDBE6ff; // secondary from custom.scss
+    border-radius: 10px;
+}

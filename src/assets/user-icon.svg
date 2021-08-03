@@ -1,0 +1,25 @@
+<svg
+    viewbox="0 0 21 23"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    overflow="visible"
+    preserveAspectRatio="xMaxYMax meet">
+    
+    <defs>
+        <clipPath id="clip0">
+            <rect x="892" y="52" width="21" height="23"/>
+        </clipPath>
+    </defs>
+    
+    <g clip-path="url(#clip0)" transform="translate(-892 -52)">
+        <path
+            d="M907 58C907 60.7615 904.761 63 902 63 899.239 63 897 60.7615 897 58 897 55.2385 899.239 53 902 53 904.761 53 907 55.2385 907 58Z"
+            fill="#FFFFFF"
+            fill-rule="evenodd"/>
+
+        <path
+            d="M912 74 912 69C912 68.25 911.625 67.5 911 67 909.625 65.875 907.875 65.125 906.125 64.625 904.875 64.25 903.5 64 902 64 900.625 64 899.25 64.25 897.875 64.625 896.125 65.125 894.375 66 893 67 892.375 67.5 892 68.25 892 69L892 74 912 74Z"
+            fill="#FFFFFF"
+            fill-rule="evenodd"/>
+    </g>
+</svg>

@@ -1,0 +1,85 @@
+<div class="container text-primary">
+
+  <div class="d-flex flex-column ">
+
+    <div class="d-flex flex-row ">
+      <div class="panel-route" (click)="backToMain()">
+        <div class="panel-item">
+          <div class="d-flex flex-column mx-3">
+            <h5 class="d-flex flex-row">Pre-Score Leads</h5>
+            <p class="d-flex flex-row">Look into the books</p>
+          </div>
+          
+        </div>
+        
+      </div>
+      <div class="d-flex flex-column align-items-flex-end flex-fill my-2" (click)="collapsePanel()">
+          <!-- Not a back arrow, actually supposed to expand/collapse left panel from what I can surmise from the ppt -->
+        <object
+          type="image/svg+xml"
+          data="../../../assets/Back-Arrow-new-analysis-submenu-icon.svg"
+          class="panel-icons d-flex align-self-flex-end arrow"
+        >
+          
+        </object>
+      </div>
+    </div>
+    <div class="d-flex flex-row my-3">
+      <div class="panel-route " (click)="leadgeneration()">
+       
+        <div class="panel-item d-flex flex-row">
+          <object
+            type="image/svg+xml"
+            data="../../../assets/Loss-Performance-new-analysis-submenu-icon.svg"
+            class="panel-icons mx-1">
+            L
+          </object>
+          <div class="mx-3">
+            <h5>Lead Generation</h5>
+            <p>3rd Party Data overlay</p>
+          </div>
+        </div>
+    
+        
+      </div>
+    </div>
+    <div class="d-flex flex-row my-3">
+      <div class="panel-route" >
+        <div class="panel-item d-flex flex-row">
+          <object
+            type="image/svg+xml"
+            data="../../../assets/Growth-Performance-new-analysis-submenu-icon.svg"
+            class="panel-icons"
+          >
+            G
+          </object>
+          <div class="mx-3">
+            <h5>Quick Quote</h5>
+            <p>Generate a quote</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="d-flex flex-row my-3">
+      <div class="panel-route" >
+        <div class="panel-item d-flex flex-row">
+          <object
+            type="image/svg+xml"
+            data="../../../assets/Risk-Performance-new-analysis-submenu-icon.svg"
+            class="panel-icons"
+          >
+            R
+          </object>
+          <div class="mx-3">
+            <h5>Leads Routing</h5>
+            <p>Send to right partners</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

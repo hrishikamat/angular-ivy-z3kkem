@@ -1,0 +1,43 @@
+.leni {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+ul.nudges-list {
+    padding: 0px 0px;
+    margin: 0px 0px;
+}
+
+.leni-header {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+li.nudges-list {
+    list-style-type: none;
+}
+
+.nudge-bar {
+    font-size: 60pt;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    line-height: 60px;
+}
+
+.nudge-text {
+    line-height: 18px;
+}
+
+.leni-nudge {
+    background-color: inherit;
+    min-height: 7em;
+    max-height: 7em;
+    overflow: hidden;
+}
+
+.leni-nudge:hover {
+    background-color: #CEDBE6ff; // secondary from custom.scss
+    border-radius: 10px;
+}

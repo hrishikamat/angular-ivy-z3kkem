@@ -1,0 +1,40 @@
+#nav-search {
+  display: flex;
+  flex-flow: row;
+}
+
+#navigation {
+  max-width: 100%;
+}
+
+.navbar{
+  display: flex;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar-icons {
+  width: 1.75em;
+  height: 1.75em;
+  display: inline;
+  pointer-events: none;
+}
+
+.nav-user-text {
+  margin: 0px 0px;
+}
+
+.navbar-logo {
+  margin-left: 1em;
+}
+
+.linkDisable> li {
+  cursor: not-allowed;
+}
+
+.linkDisable> li > a {
+  cursor: not-allowed;
+  pointer-events: none;
+}

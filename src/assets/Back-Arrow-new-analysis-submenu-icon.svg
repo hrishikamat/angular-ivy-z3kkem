@@ -1,0 +1,24 @@
+<svg 
+    width="34" 
+    height="67" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    overflow="visible" 
+    preserveAspectRatio="xMaxYMax meet"
+    viewBox="0 0 34 67">
+    <defs>
+        <clipPath id="clip0">
+            <rect x="1144" y="504" width="34" height="67"/>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#clip0)" 
+        transform="translate(-1144 -504)">
+        <path d="M1145.19 506.059 1153.5 504.5 1177.5 537.5 1153.5 570.5 1144.5 566.546 1167.3 536.664 1145.19 506.059Z" 
+            stroke="#2683C6" 
+            stroke-width="1.14583" 
+            stroke-linejoin="round" 
+            stroke-miterlimit="10" 
+            fill="#2683C6" 
+            fill-rule="evenodd"/>
+    </g>
+</svg>
