@@ -11,12 +11,10 @@
 
       <!-- Brand logo/home link -->
       <div class="navbar-logo">
-        <!--<img
-          src="https://www.lntinfotech.com/wp-content/uploads/2017/05/LTI-Lets-grp_lockup_th-3.jpg"
-          alt="LTI"
-          height="50px"
-        />-->
-        <a class="navbar-brand text-white" href="#">RISKInsight</a>
+        <a class="navbar-brand text-white mr-0" (click)="goHome()">
+          <!-- SVG not working for Risk logo -->
+          RISKInsight
+        </a>
       </div>
     </div>
 
@@ -91,11 +89,7 @@
       </form>
     -->
       <div *ngIf="!loggedIn" class="lti-logo">
-        <img 
-          src="https://www.lntinfotech.com/wp-content/uploads/2017/05/LTI-Lets-grp_lockup_th-3.jpg"
-          alt="LTI"
-          height="50px"/>
-          <!-- Should be SVG when Given -->
+        <object type="image/svg+xml" data="../../../assets/LTI.svg" class="navbar-icons">LTI</object>
       </div>
     </div>
   </nav>

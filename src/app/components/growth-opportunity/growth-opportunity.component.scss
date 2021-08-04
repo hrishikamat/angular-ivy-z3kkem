@@ -1,11 +1,27 @@
-.dashboard{
-    box-sizing: inherit;
-    width:100%;
-    align-items: stretch;
+.dashboard {
+  box-sizing: inherit;
+  width: 100%;
+  align-items: stretch;
 }
 
-.go-submit{
-    height:100px;
-    width:200px;
-
+.go-submit {
+  height: 100px;
+  width: 250px;
 }
+
+.play {
+    max-width: 60px;
+}
+
+.darrow {
+  
+  max-height: 19px;
+  // transform: rotate(90deg);
+}
+
+.arrow {
+  display: flex;
+  align-items: flex-end;
+  max-height: 37px;
+}
+

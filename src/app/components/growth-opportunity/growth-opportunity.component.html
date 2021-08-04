@@ -1,132 +1,248 @@
 <div class="d-flex flex-row container mt-4 w-100 mx-3 justify-content-evenly">
-  <div class="card mb-3 col-6  mx-2 flex-fill flex-grow-1 w-100">
-    <h3 class="card-header bg-primary text-white">Geography Dimensions</h3>
+  <div class="d-flex card mb-3 col-6 mx-2 flex-fill flex-grow-1 w-100">
+    <h3 class="d-flex card-header bg-primary text-white">Geography Dimensions
+
+      <object
+      type="image/svg+xml"
+      data="../../../assets/white-arrow-down.svg"
+      class="d-flex col-6 panel-icons align-items-center justify-content-flex-end darrow"
+    >
+      
+</object>
+
+    </h3>
     <div class="card-body w-100">
       <div class="container">
-        <form class="d-flex flex-column">
+        <form class="d-flex flex-column" [formGroup]="formData">
           <div class="form-group flex-grow-1 d-flex flex-column">
-            <label for="country" class="text-secondary fs-4 mb-1">Country</label>
-            <select class="form-select w-100 flex-grow-1 " name="country">
-              <option selected>Country....</option>
-              <optgroup label="country">
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+            <label for="country" class="text-secondary fs-4 mb-1"
+              >Country</label
+            >
+            <select
+              class="form-select w-100 flex-grow-1"
+              formControlName="country"
+            >
+              <option selected>Select a Country....</option>
+              <optgroup label="countries">
+                <option value="1">United States</option>
               </optgroup>
             </select>
             <div class="mt-3">
-                <h5>Country Filters: <span class="badge bg-secondary">United States</span></h5>
+             
+                
+                <span class="badge bg-secondary">United States</span>
+             
             </div>
           </div>
           <div class="form-group flex-grow-1">
             <label for="region" class="text-secondary fs-4 mb-1">Region</label>
-            <select class="form-select" name="region">
-              <option selected>Region....</option>
-              <optgroup label="region">
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+            <select class="form-select" formControlName="region" name="region">
+              <option selected>Select a Region...</option>
+              <optgroup label="Regions">
+                <option *ngFor="let region of regions" [value]="region">
+                  {{ region }}
+                </option>
               </optgroup>
             </select>
             <div class="mt-3">
-                <h5>Region Filters: <span class="badge bg-secondary mx-1">South</span><span class="badge bg-secondary mx-1">Northeast</span></h5>
+              <button class="btn btn-info" (click)="onRegionSelection()">
+                <span>
+                  <i i-bs name="plus-circle"></i>
+                </span>
+              </button>
+              
+                <span
+                  *ngFor="let selectedRegion of selectedRegions"
+                  class="badge bg-secondary mx-1"
+                  (click)="removeState($event)"
+                  >{{ selectedRegion }}</span
+                >
+              
             </div>
           </div>
           <div class="form-group flex-grow-1">
             <label for="state" class="text-secondary fs-4 mb-1">State</label>
-            <select class="form-select" name="state">
-              <option selected>State....</option>
-              <optgroup label="state">
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+            <select class="form-select" formControlName="state" name="state">
+              <option selected>Select a State...</option>
+              <optgroup label="States">
+                
+
+                <option *ngFor="let state of states" [value]="state">
+                  {{ state }}
+                </option>
               </optgroup>
             </select>
             <div class="mt-3">
-                <h5>State Filters: <span class="badge bg-secondary mx-1">New York</span><span class="badge bg-secondary mx-1">Florida</span></h5>
+              <button class="btn btn-info" (click)="onStateSelection()">
+                <span>
+                  <i i-bs name="plus-circle"></i>
+                </span>
+              </button>
+          
+                
+                <span
+                  *ngFor="let selectedLongState of selectedStatesLong"
+                  class="badge bg-secondary mx-1"
+                  (click)="removeState($event)"
+                  >{{ selectedLongState }}</span
+                >
+            
             </div>
           </div>
           <div class="form-group flex-grow-1">
-            <label for="city" class="text-secondary fs-4 mb-1">City</label>
-            <select class="form-select" name="city">
-              <option selected>City....</option>
-              <optgroup label="city">
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+            <label for="city" class="text-secondary fs-4 mb-1">City: </label>
+            <select class="form-select" formControlName="City">
+              <option selected>Select a City</option>
+
+              <optgroup [label]="selectedState">
+                <option *ngFor="let city of cities" [value]="city">
+                  {{ city }}
+                </option>
               </optgroup>
             </select>
             <div class="mt-3">
-                <h5>City Filters: None</h5>
+              <button class="btn btn-info" (click)="onCitySelection()">
+                <span>
+                  <i i-bs name="plus-circle"></i>
+                </span>
+              </button>
+             
+                
+                <span
+                  *ngFor="let selectedCity of selectedCities"
+                  class="badge bg-secondary mx-1"
+                  (click)="removeCity($event)"
+                  >{{ selectedCity }}</span
+                >
+             
             </div>
           </div>
         </form>
       </div>
     </div>
   </div>
-  <div class="card mb-3 col-6 mx-2 flex-fill flex-grow-1 w-100">
-    <h3 class="card-header bg-primary text-white">Insurance Offering Dimensions</h3>
+  <div class="d-flex card mb-3 col-8 mx-2 flex-fill flex-grow-1 w-100">
+    <h3 class="d-flex card-header bg-primary text-white">
+      Insurance Offering Dimensions
+
+      <object
+      type="image/svg+xml"
+      data="../../../assets/white-arrow-down.svg"
+      class="d-flex col-4 panel-icons justify-content-right darrow"
+    >
+      
+</object>
+      
+    </h3>
     <div class="card-body">
       <form>
-
+        <div class="form-group">
+          <label for="market" class="text-secondary fs-4 mb-1">Market</label>
+          <select class="form-select w-100" name="market">
+            <option selected>Market....</option>
+            <optgroup label="market">
+              <option *ngFor="let market of markets" [value]="market">
+                {{ market }}
+              </option>
+            </optgroup>
+          </select>
+          <div class="mt-3">
+            <h5>
+              Market Filters:
+              <span class="badge bg-secondary mx-1">Auto Dealers</span>
+            </h5>
+          </div>
+        </div>
 
         <div class="form-group">
-            <label for="market" class="text-secondary fs-4 mb-1">Market</label>
-            <select class="form-select w-100" name="market">
-
-              <option selected>Market....</option>
-              <optgroup label="market">
-                <option *ngFor="let market of markets" value={state.value}>One</option>
-               
-              </optgroup>
-            </select>
-            <div class="mt-3">
-                <h5>Market Filters: <span class="badge bg-secondary mx-1">Auto Dealers</span></h5>
-            </div>
+          <label for="product" class="text-secondary fs-4 mb-1">Product</label>
+          <select class="form-select w-100" name="product">
+            <option selected>Product....</option>
+            <optgroup label="product">
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </optgroup>
+          </select>
+          <div class="mt-3">
+            <h5>Product Filters: None</h5>
           </div>
-
+        </div>
         <div class="form-group">
-            <label for="product" class="text-secondary fs-4 mb-1">Product</label>
-            <select class="form-select w-100" name="product">
-              <option selected>Product....</option>
-              <optgroup label="product">
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </optgroup>
-            </select>
-            <div class="mt-3">
-                <h5>Product Filters: None</h5>
-            </div>
+          <label for="lineOfBusiness" class="text-secondary fs-4 mb-1"
+            >Line of Business</label
+          >
+          <select class="form-select w-100" name="lineOfBusiness">
+            <option selected>Line of Business....</option>
+            <optgroup label="lineOfBusiness">
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </optgroup>
+          </select>
+          <div class="mt-3">
+            <h5>
+              Line of Business Filters:
+              <span class="badge bg-secondary mx-1">BOP</span
+              ><span class="badge bg-secondary mx-1">CP</span>
+            </h5>
           </div>
-        <div class="form-group">
-            <label for="lineOfBusiness" class="text-secondary fs-4 mb-1">Line of Business</label>
-            <select class="form-select w-100" name="lineOfBusiness">
-              <option selected>Line of Business....</option>
-              <optgroup label="lineOfBusiness">
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </optgroup>
-            </select>
-            <div class="mt-3">
-                <h5>Line of Business Filters: <span class="badge bg-secondary mx-1">BOP</span><span class="badge bg-secondary mx-1">CP</span></h5>
-            </div>
-          </div>
-
+        </div>
       </form>
     </div>
   </div>
 
 </div>
+<div class="d-flex flex-row container mt-4 w-100 mx-3 justify-content-evenly">
+  
+  <div class="d-flex card mb-3 col-6 mx-2 flex-fill flex-grow-1 w-100">
+    <h3 class="d-flex card-header bg-primary text-white">
+      Coverage Dimensions
+       <object
+          type="image/svg+xml"
+          data="../../../assets/white-arrow-toggle.svg"
+          class="d-flex col-6 panel-icons align-self-flex-start justify-content-flex-end arrow"
+        >
+          
+  </object>
+    </h3>
+    
+    
+   
+  </div>
+  
+  
+  <div class="d-flex card mb-3 col-8 mx-2 flex-fill flex-grow-1 w-100">
+    <h3 class="d-flex card-header bg-primary text-white">
+      Risk & Exposure Dimensions
+      <object
+      type="image/svg+xml"
+      data="../../../assets/white-arrow-toggle.svg"
+      class="d-flex col-4 panel-icons align-self-flex-start justify-content-flex-end arrow"
+    >
+      
+</object>
+    </h3>
+   
+  </div>
 
-<div class="d-flex justify-content-evenly w-100 flex-grow-1 my-2 go-submit">
+</div>
+
+<div class="d-flex flex-row justify-content-evenly w-100 flex-fill flex-grow-1 my-2 go-submit">
   <button
-    class="btn btn-primary go-submit"
+    class="btn btn-primary go-submit d-flex justify-content-evenly"
     type="button"
     (click)="submitFieldData()"
-  >
-    <span> <i i-bs name="search"></i> </span>
-    View visual using selected filters
+  > 
+  
+<object
+      type="image/svg+xml"
+      data="../../../assets/PlayButton.svg"
+      class="d-flex flex-column align-self-center justify-content-around play"
+    > 
+      
+</object>
+<h4 class="d-flex flex-column align-self-center">Let's Discover Opportunities!</h4>
+    
   </button>
 </div>

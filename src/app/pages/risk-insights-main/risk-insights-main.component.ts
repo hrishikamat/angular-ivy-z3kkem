@@ -15,6 +15,7 @@ export class RiskInsightsMainComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    this.router.onSameUrlNavigation = 'reload';
     this.router.navigate( [{
       outlets: {
         leftPanel: ['leni-nudges'],

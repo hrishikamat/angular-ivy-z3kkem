@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { GaugesModule } from 'ng-canvas-gauges';
@@ -30,6 +30,7 @@ import { LogTesterComponent } from './components/log-tester/log-tester.component
 
 import { MarketGeographyComponent } from './components/market-geography/market-geography.component';
 
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { PortfolioAnalysisComponent } from './pages/portfolio-analysis/portfolio-analysis.component';
@@ -45,12 +46,21 @@ import { RiskDetailWeatherComponent } from './components/risk-detail-weather/ris
 import { RiskInsightsMainComponent } from './pages/risk-insights-main/risk-insights-main.component';
 import { RiskScoreResultsComponent } from './components/risk-score-results/risk-score-results.component';
 
-
 import { LogService } from './services/log/log.service';
 import { LogPublishersService } from './services/LogPublisher/log-publishers.service';
 import { PowerBIService } from './services/powerbi/powerbi.service';
+import { FormBuilder } from '@angular/forms';
+import { NgxBootstrapIconsModule, ColorTheme } from 'ngx-bootstrap-icons';
+import { search, plusCircle } from 'ngx-bootstrap-icons';
+
+import { IPublicClientApplication, PublicClientApplication, InteractionType, BrowserCacheLocation, LogLevel, EventMessage, EventType } from '@azure/msal-browser';
+import { MsalGuard, MsalInterceptor, MsalBroadcastService, MsalInterceptorConfiguration, MsalModule, MsalService, MSAL_GUARD_CONFIG, MSAL_INSTANCE, MSAL_INTERCEPTOR_CONFIG, MsalGuardConfiguration, MsalRedirectComponent } from '@azure/msal-angular';
+// import { OAuthCallBackComponent } from './components/oauth-call-back/oauth-call-back.component';
+// import { OAuthCallbackHandler } from './services/Adal/oauth-callback-handler';
 import { RiskInsightsLoginService } from "./services/risk-insights/risk-insights-login.service";
 
+
+const icons = { search, plusCircle };
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,6 +80,7 @@ import { RiskInsightsLoginService } from "./services/risk-insights/risk-insights
     LogTesterComponent,
     MarketGeographyComponent,
     NavbarComponent,
+    // OAuthCallBackComponent,
     PortfolioAnalysisComponent,
     PowerBiComponent,
     PreScoreLeadGenerationPanelComponent,
@@ -86,22 +97,59 @@ import { RiskInsightsLoginService } from "./services/risk-insights/risk-insights
     DiscoverLeadsComponent    
   ],
   imports: [
+   
     AppRoutingModule,
     BrowserModule,
     GaugesModule,
     HttpClientModule,
     NgbModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    FormsModule,
+    ReactiveFormsModule,
+    
+    NgxBootstrapIconsModule.pick(icons, {
+      height: '1.75em',
+      width: '1.75em',
+      theme: ColorTheme.White50,
+    }),
+    MsalModule.forRoot( new PublicClientApplication({
+			auth: {
+				clientId: 'Enter_the_Application_Id_Here',
+			},
+			cache: {
+				cacheLocation: 'localStorage',
+			}
+		}), {
+			interactionType: InteractionType.Redirect,
+			authRequest: {
+				scopes: ['user.read']
+			}
+		}, 
+    {
+			interactionType: InteractionType.Redirect,
+			protectedResourceMap: new Map([ 
+				['https://graph.microsoft.com/v1.0/me', ['user.read']]
+			])
+		},
+    
+    
+    )
+    
   ],
   providers: [
     HttpClient,
     LogPublishersService,
     LogService,
     PowerBIService,
-    RiskInsightsLoginService
+    FormBuilder,
+    FormControl,
+    {
+			provide: HTTP_INTERCEPTORS,
+			useClass: MsalInterceptor,
+			multi: true
+		},RiskInsightsLoginService
+    // OAuthCallbackHandler
   ],
-  bootstrap: [
-    AppComponent
-  ],
+  bootstrap: [AppComponent, MsalRedirectComponent],
 })
 export class AppModule {}

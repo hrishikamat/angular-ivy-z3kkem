@@ -1,0 +1,37 @@
+export const states = [
+"AL",
+"AZ",
+"CA",
+"CO",
+"CT",
+"DC",
+"DE",
+"FL",
+"GA",
+"IL",
+"IN",
+"MA",
+"MD",
+"ME",
+"MI",
+"MO",
+"MS",
+"NC",
+"NH",
+"NJ",
+"NY",
+"OH",
+"OR",
+"PA",
+"RI",
+"SC",
+"TN",
+"TX",
+"VA",
+"VT",
+"WI",
+"WV"
+
+];
+
+export default states;

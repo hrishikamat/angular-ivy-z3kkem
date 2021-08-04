@@ -11,6 +11,8 @@ import { GrowthOpportunityComponent } from './components/growth-opportunity/grow
 import { PowerBiComponent } from './components/power-bi/power-bi.component';
 import { GrowthOpportunityPanelComponent } from './components/growth-opportunity-panel/growth-opportunity-panel.component';
 import { PortfolioAnalysisComponent } from "./pages/portfolio-analysis/portfolio-analysis.component";
+import { OAuthCallBackComponent } from './components/oauth-call-back/oauth-call-back.component';
+import { AuthenticationGuard as OAuthCallbackHandler } from './modules/authentication.guard';
 import {PreScoreLeadGenerationPanelComponent} from './components/prescore-leadgenerator-panel/prescore-leadgenerator-panel.component';
 import {LeadGenerationComponent} from './components/lead-generation/lead-generation.component';
 import {DiscoverLeadsComponent} from './components/discover-leads/discover-leads.component';
@@ -19,6 +21,7 @@ const loggedIn = true; // TODO: Change to a service to check status
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'navbar-workaround', component:  RiskInsightsMainComponent, pathMatch: 'full'}, // for going home in navbar, workaround for now
   { path: 'login', component: LoginComponent },
   { path: 'risk-management', component:  RiskInsightsMainComponent },
   { path: 'portfolio-analysis', component:  PortfolioAnalysisComponent },
@@ -29,6 +32,8 @@ const routes: Routes = [
   { path: 'growth-opportunity-panel', component: GrowthOpportunityPanelComponent, outlet: 'leftPanel'},
   { path: 'growth-opportunity', component: GrowthOpportunityComponent, outlet: 'mainPanel'},
   { path: 'power-bi', component: PowerBiComponent, outlet: 'mainPanel'},
+  { path: 'id_token', component: OAuthCallBackComponent, canActivate: [OAuthCallbackHandler] },
+
   { path: 'prescore-leadgenerator-panel', component: PreScoreLeadGenerationPanelComponent, outlet: 'leftPanel'},
   { path: 'lead-generation', component: LeadGenerationComponent, outlet: 'mainPanel'},
   { path: 'discover-leads', component:DiscoverLeadsComponent, outlet:'mainPanel'}

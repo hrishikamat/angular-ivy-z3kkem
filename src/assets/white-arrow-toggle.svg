@@ -1,0 +1,17 @@
+<svg 
+width="34" 
+height="67" 
+xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+overflow="visible"
+ preserveAspectRatio="xMaxYMax meet"
+    viewBox="0 0 34 67">
+    <defs>
+        <clipPath id="clip0">
+            <rect x="1948" y="2211" width="34" height="67"/>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#clip0)" transform="translate(-1948 -2211)">
+        <path d="M1949.19 2213.06 1957.5 2211.5 1981.5 2244.5 1957.5 2277.5 1948.5 2273.55 1971.3 2243.66 1949.19 2213.06Z" stroke="#FFFFFF" stroke-width="1.14583" stroke-linejoin="round" stroke-miterlimit="10" fill="#FFFFFF" fill-rule="evenodd"/>
+    </g>
+</svg>

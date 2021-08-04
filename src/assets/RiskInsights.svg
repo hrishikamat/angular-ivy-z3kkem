@@ -1,0 +1,19 @@
+<svg
+    viewBox="0 0 1210 347"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    overflow="visible"
+    preserveAspectRatio="xMaxYMax meet">
+
+    <!-- This SVG is not configured properly, does not look like mockup -->
+
+    <defs>
+        <clipPath id="clip0">
+            <rect x="15" y="43" width="1210" height="347"/>
+        </clipPath>
+    </defs>
+    
+    <g clip-path="url(#clip0)" transform="translate(-15 -43)">
+        <text fill="#FFFFFF" font-family="Biome,Biome_MSFontService,sans-serif" font-weight="700" font-size="165" transform="matrix(1 0 0 1 114.89 248)">RiskInsights</text>
+    </g>
+</svg>

@@ -46,10 +46,8 @@ export class LoginComponent implements OnInit {
   
   
 
-
   // Only AlphaNumeric
   keyPressAlphaNumeric(event) {
-
     var inp = String.fromCharCode(event.keyCode);
 
     //sanitize user input for authentication allowing for special characters for strong passwords
